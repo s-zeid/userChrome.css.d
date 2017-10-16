@@ -1,0 +1,36 @@
+/* Hide sidebar header when Tree Style Tab is active */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+ border: none !important;
+ display: none !important;
+}
+
+
+/* Hide sidebar close button and menu item */
+#sidebar-close {
+ visibility: collapse !important;
+}
+#sidebarMenu-popup [oncommand="SidebarUI.hide()"],
+#sidebarMenu-popup toolbarseparator:last-of-type {
+ visibility: collapse !important;
+}
+
+
+/* Make sidebar splitter (when visible) thinner and ThreeDShadow */
+#sidebar-splitter {
+ width: 1px !important;
+ border-left: none !important;
+ border-color: ThreeDShadow !important;
+}
+
+
+/* Replace sidebar splitter with border on the sidebar itself
+   (use Browser Toolbox to resize the sidebar) */
+#sidebar-splitter {
+ visibility: collapse !important;
+}
+#sidebar-box[ordinal="2"] /* on the left */ {
+ border-right: 1px solid ThreeDShadow !important;
+}
+#sidebar-box[ordinal="4"] /* on the right */ {
+ border-left: 1px solid ThreeDShadow !important;
+}

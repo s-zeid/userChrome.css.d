@@ -1,0 +1,38 @@
+* {
+ --chrome-background-color: Window !important;
+ --chrome-secondary-background-color: Window !important;
+ --chrome-selection-background-color: Highlight !important;
+ --chrome-selection-color: HighlightText !important;
+ --tab-line-color: Highlight !important;
+ --tab-line-selected-color: Highlight !important;
+ --theme-tab-toolbar-background: Window !important;
+ --theme-toolbar-background: Window !important;
+ --theme-toolbar-background-hover: transparent !important;
+ --theme-toolbar-selected-color: Highlight !important;
+ --theme-selection-background: Highlight !important;
+ --theme-selection-background-hover: ButtonFace !important;
+ --theme-selection-color: HighlightText !important;
+ --toolbarbutton-icon-fill-attention: Highlight !important;
+}
+
+#sidebar-header {
+ background: var(--chrome-secondary-background-color) !important;
+}
+
+.devtools-tab.selected.icon-invertable > img {
+ filter: unset !important;
+}
+
+/*
+#TabsToolbar {
+ background: Window !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-line {
+ background: Highlight !important;
+}
+
+#navigator-toolbox > toolbar:not(#TabsToolbar):not(#toolbar-menubar), .browserContainer > findbar, #browser-bottombox {
+ background-color: Window !important;
+}
+*/

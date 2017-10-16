@@ -1,0 +1,49 @@
+html {
+ background: linear-gradient(rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.64)), linear-gradient(Window, Window), #fafafa !important;
+}
+
+body, #tabContextMenu {
+ font-weight: lighter !important;
+}
+
+#tabbar {
+ border: none !important;
+}
+
+.tab {
+ border: none !important;
+ margin-bottom: 0px !important;
+}
+
+.tab:not(.active):not(:hover) {
+ background: transparent !important;
+}
+
+.tab:not(.active):hover {
+ background: ButtonFace !important;
+}
+
+.tab.active {
+ background: Highlight !important;
+}
+
+.tab .twisty {
+ font-family: "Open Sans" !important;
+ font-size: 10px !important;
+}
+
+.tab:not(:hover):not(.active) .closebox {
+ display: none;
+}
+
+.tab .closebox {
+ font-family: "Open Sans" !important;
+ font-size: 10px !important;
+}
+.tab.active .closebox {
+ color: HighlightText !important;
+}
+
+.newtab-button-box {
+ display: none !important;
+}

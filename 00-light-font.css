@@ -1,0 +1,16 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* NOTE:  Also import this from userContent.css in order to affect XUL content. */
+
+/* A bunch of selectors were copy/pasted from the Firefox source code; therefore: */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+window, page, dialog, wizard, prefwindow,
+button, toolbaritem label,
+menubar, menu, menulist, menupopup, menuitem,
+#widget-overflow-fixed-list .toolbarbutton-1 > .toolbarbutton-text, #widget-overflow-list .toolbarbutton-1 > .toolbarbutton-text, .subviewbutton:not(.panel-subview-footer) > .toolbarbutton-text, .PanelUI-subView .subviewbutton:not(.panel-subview-footer) > .menu-text, .PanelUI-subView .subviewbutton:not(.panel-subview-footer) > .menu-iconic-text {
+ font-weight: lighter !important;
+}

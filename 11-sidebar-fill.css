@@ -1,0 +1,35 @@
+/* Expand sidebar to fill the entire window */
+/* NOTE:  When hiding the sidebar header, use `display: none` instead of
+          `visibility: collapse`. */
+
+/* Configuration */
+#main-window {
+ --x-sidebar-width: 266.5px;
+ --x-scale: 1.5;  /* scaling factor for HiDPI displays */
+}
+#sidebar-box {
+ --x-sidebar-header-height: 24.5px;
+ /* compact: 24.5px, normal: 28.5px, touch: 29.75px */
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+ --x-sidebar-header-height: 0px;  /* comment out if not hiding sidebar header for TST */
+}
+
+
+/* Code */
+#navigator-toolbox, #appcontent, #browser-bottombox {
+ margin-left: var(--x-sidebar-width) !important;
+}
+#sidebar-box {
+ position: fixed !important; top: 0 !important; bottom: 0 !important;
+ z-index: 999 !important;
+ width: var(--x-sidebar-width) !important;
+ box-sizing: border-box !important;
+ --x-sidebar-header-height-scaled: calc(var(--x-scale)*var(--x-sidebar-header-height));
+}
+#sidebar-header {
+ width: 100% !important; height: var(--x-sidebar-header-height-scaled) !important;
+}
+#sidebar {
+ width: 100% !important; height: calc(100% - var(--x-sidebar-header-height-scaled)) !important;
+}

@@ -1,0 +1,7 @@
+/* Hide tabs at the top */
+#TabsToolbar {
+ visibility: collapse !important;
+}
+#TabsToolbar:not([_]) + #nav-bar {
+ border-top: none !important;
+}
