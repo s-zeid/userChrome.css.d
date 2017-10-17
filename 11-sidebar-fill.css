@@ -35,6 +35,9 @@
 #sidebar-header {
  width: 100% !important; height: var(--x-sidebar-header-height-scaled) !important;
 }
+[uidensity="compact"] #sidebar-title {
+ margin-top: -0.16em !important;
+}
 #sidebar {
  width: 100% !important; height: calc(100% - var(--x-sidebar-header-height-scaled)) !important;
 }
