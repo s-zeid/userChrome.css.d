@@ -22,22 +22,24 @@
 
 
 /* Code */
-#navigator-toolbox, #appcontent, #browser-bottombox {
+#main-window:not([inDOMFullscreen]) #navigator-toolbox,
+#main-window:not([inDOMFullscreen]) #appcontent,
+#main-window:not([inDOMFullscreen]) #browser-bottombox {
  margin-left: var(--x-sidebar-width) !important;
 }
-#sidebar-box {
+#main-window:not([inDOMFullscreen]) #sidebar-box {
  position: fixed !important; top: 0 !important; bottom: 0 !important;
  z-index: 999 !important;
  width: var(--x-sidebar-width) !important;
  box-sizing: border-box !important;
  --x-sidebar-header-height-scaled: calc(var(--x-scale)*var(--x-sidebar-header-height));
 }
-#sidebar-header {
+#main-window:not([inDOMFullscreen]) #sidebar-header {
  width: 100% !important; height: var(--x-sidebar-header-height-scaled) !important;
 }
-[uidensity="compact"] #sidebar-title {
+#main-window:not([inDOMFullscreen])[uidensity="compact"] #sidebar-title {
  margin-top: -0.16em !important;
 }
-#sidebar {
+#main-window:not([inDOMFullscreen]) #sidebar {
  width: 100% !important; height: calc(100% - var(--x-sidebar-header-height-scaled)) !important;
 }
