@@ -8,7 +8,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 
-window, page, dialog, wizard, prefwindow,
+window, page, dialog, wizard, prefwindow, tooltip,
 button, toolbaritem label,
 menubar, menu, menulist, menupopup, menuitem,
 #widget-overflow-fixed-list .toolbarbutton-1 > .toolbarbutton-text, #widget-overflow-list .toolbarbutton-1 > .toolbarbutton-text, .subviewbutton:not(.panel-subview-footer) > .toolbarbutton-text, .PanelUI-subView .subviewbutton:not(.panel-subview-footer) > .menu-text, .PanelUI-subView .subviewbutton:not(.panel-subview-footer) > .menu-iconic-text {
