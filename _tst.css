@@ -1,5 +1,7 @@
 html {
- background: linear-gradient(rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.64)), linear-gradient(Window, Window), #fafafa !important;
+ background: linear-gradient(rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.64)),
+             linear-gradient(Window, Window),
+             #fafafa !important;
 }
 
 body, #tabContextMenu {
