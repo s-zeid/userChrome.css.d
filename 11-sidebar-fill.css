@@ -7,12 +7,17 @@
  --x-sidebar-width: 266.5px;
  --x-scale: 1.5;  /* scaling factor for HiDPI displays */
 }
-#sidebar-box {
- --x-sidebar-header-height: 24.5px;
- /* compact: 24.5px, normal: 28.5px, touch: 29.75px */
-}
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+:root #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
  --x-sidebar-header-height: 0px;  /* comment out if not hiding sidebar header for TST */
+}
+/* normal uidensity */ #sidebar-box {
+ --x-sidebar-header-height: 28.5px;
+}
+[uidensity="compact"] #sidebar-box {
+ --x-sidebar-header-height: 24.5px;
+}
+[uidensity="touch"] #sidebar-box {
+ --x-sidebar-header-height: 29.75px;
 }
 
 
