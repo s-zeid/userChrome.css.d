@@ -22,7 +22,7 @@ html:before {  /* `body { background }` doesn't work for some reason */
  border-top: 1px solid rgba(0, 0, 0, 0.084) !important;
 }
 
-body, #tabContextMenu {
+body, #tabContextMenu * {
  font-weight: lighter !important;
 }
 
