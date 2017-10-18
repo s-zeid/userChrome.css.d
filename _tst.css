@@ -13,7 +13,10 @@ html:before {  /* `body { background }` doesn't work for some reason */
 #tabbar {
  background: Window !important;
 }
-#all-tabs {
+#all-tabs, .tabs {
+ min-height: 100% !important;
+}
+.tabs {
  background: rgba(255, 255, 255, 0.64) !important;
 }
 
