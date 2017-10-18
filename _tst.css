@@ -39,19 +39,19 @@ body, #tabContextMenu * {
 }
 
 .tab:not(.active):not(:hover) {
- background: transparent !important;
+ background-color: transparent !important;
 }
 
 .tab:not(.active):hover {
- background: ButtonFace !important;
+ background-color: ButtonFace !important;
 }
 
 .tab.pinned:not(.active):hover {
- background: rgba(0, 0, 0, 0.04) !important;
+ background-color: rgba(0, 0, 0, 0.04) !important;
 }
 
 .tab.active {
- background: Highlight !important;
+ background-color: Highlight !important;
 }
 
 .tab .twisty {
