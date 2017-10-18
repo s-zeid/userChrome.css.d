@@ -22,24 +22,25 @@
 
 
 /* Code */
-#main-window:not([inDOMFullscreen]) #navigator-toolbox,
-#main-window:not([inDOMFullscreen]) #appcontent,
-#main-window:not([inDOMFullscreen]) #browser-bottombox {
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #navigator-toolbox,
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #appcontent,
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #browser-bottombox {
  margin-left: var(--x-sidebar-width) !important;
 }
-#main-window:not([inDOMFullscreen]) #sidebar-box {
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #sidebar-box {
  position: fixed !important; top: 0 !important; bottom: 0 !important;
  z-index: 999 !important;
  width: var(--x-sidebar-width) !important;
  box-sizing: border-box !important;
  --x-sidebar-header-height-scaled: calc(var(--x-scale)*var(--x-sidebar-header-height));
 }
-#main-window:not([inDOMFullscreen]) #sidebar-header {
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #sidebar-header {
  width: 100% !important; height: var(--x-sidebar-header-height-scaled) !important;
 }
-#main-window:not([inDOMFullscreen])[uidensity="compact"] #sidebar-title {
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"])[uidensity="compact"]
+#sidebar-title {
  margin-top: -0.16em !important;
 }
-#main-window:not([inDOMFullscreen]) #sidebar {
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #sidebar {
  width: 100% !important; height: calc(100% - var(--x-sidebar-header-height-scaled)) !important;
 }
