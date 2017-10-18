@@ -1,4 +1,5 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
 
 /* NOTE:  Also import this from userContent.css in order to affect XUL content. */
 
@@ -11,6 +12,11 @@
 window, page, dialog, wizard, prefwindow, tooltip,
 button, toolbaritem label,
 menubar, menu, menulist, menupopup, menuitem,
+.autocomplete-richlistitem,
 #widget-overflow-fixed-list .toolbarbutton-1 > .toolbarbutton-text, #widget-overflow-list .toolbarbutton-1 > .toolbarbutton-text, .subviewbutton:not(.panel-subview-footer) > .toolbarbutton-text, .PanelUI-subView .subviewbutton:not(.panel-subview-footer) > .menu-text, .PanelUI-subView .subviewbutton:not(.panel-subview-footer) > .menu-iconic-text {
  font-weight: lighter !important;
+}
+
+html|span.ac-emphasize-text-title, html|span.ac-emphasize-text-tag, html|span.ac-emphasize-text-url {
+ font-weight: 500 !important;
 }
