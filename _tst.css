@@ -43,6 +43,10 @@ body, #tabContextMenu {
  background: ButtonFace !important;
 }
 
+.tab.pinned:not(.active):hover {
+ background: rgba(0, 0, 0, 0.04) !important;
+}
+
 .tab.active {
  background: Highlight !important;
 }
