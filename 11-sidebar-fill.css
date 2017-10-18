@@ -4,7 +4,7 @@
 
 /* Configuration */
 #main-window {
- --x-sidebar-width: 266.5px;
+ --x-sidebar-width: 280.5px;
  --x-scale: 1.5;  /* scaling factor for HiDPI displays */
 }
 :root #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
