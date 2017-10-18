@@ -1,7 +1,25 @@
+/* Pinned tab row(s) background */
 html {
- background: linear-gradient(rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.64)),
-             linear-gradient(Window, Window),
-             #fafafa !important;
+ background: Window !important;
+}
+html:before {  /* `body { background }` doesn't work for some reason */
+ content: " ";
+ position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+ z-index: -999 !important;
+ background: rgba(255, 255, 255, 0) !important;
+}
+
+/* Non-pinned tabs background */
+#tabbar {
+ background: Window !important;
+}
+#all-tabs {
+ background: rgba(255, 255, 255, 0.64) !important;
+}
+
+/* Border between pinned and non-pinned tabs */
+#tabbar[style*="margin-top"] {
+ border-top: 1px solid rgba(0, 0, 0, 0.084) !important;
 }
 
 body, #tabContextMenu {
