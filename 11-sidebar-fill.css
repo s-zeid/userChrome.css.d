@@ -22,25 +22,25 @@
 
 
 /* Code */
-#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #navigator-toolbox,
-#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #appcontent,
-#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #browser-bottombox {
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #navigator-toolbox,
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #appcontent,
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #browser-bottombox {
  margin-left: var(--x-sidebar-width) !important;
 }
-#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #sidebar-box {
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #sidebar-box {
  position: fixed !important; top: 0 !important; bottom: 0 !important;
  z-index: 999 !important;
  width: var(--x-sidebar-width) !important;
  box-sizing: border-box !important;
  --x-sidebar-header-height-scaled: calc(var(--x-scale)*var(--x-sidebar-header-height));
 }
-#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #sidebar-header {
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #sidebar-header {
  width: 100% !important; height: var(--x-sidebar-header-height-scaled) !important;
 }
-#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"])[uidensity="compact"]
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"])[uidensity="compact"]
 #sidebar-title {
  margin-top: -0.16em !important;
 }
-#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]) #sidebar {
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #sidebar {
  width: 100% !important; height: calc(100% - var(--x-sidebar-header-height-scaled)) !important;
 }
