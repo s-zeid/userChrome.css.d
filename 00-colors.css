@@ -34,7 +34,9 @@
 }
 
 #urlbar[focused="true"] ::-moz-selection,
-.searchbar-textbox[focused="true"] ::-moz-selection {
+.searchbar-textbox[focused="true"] ::-moz-selection,
+.autocomplete-richlistitem[selected],
+treechildren.searchbar-treebody::-moz-tree-row(selected) {
  background: var(--x-highlight) !important;
  color: var(--x-highlight-text) !important;
 }
