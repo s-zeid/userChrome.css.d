@@ -1,18 +1,42 @@
+:root {
+ --x-highlight: Highlight;
+ --x-highlight-text: HighlightText;
+}
+
+@media (-moz-os-version: windows-win10) {
+ :root {
+  --x-highlight: -moz-win-accentcolor;
+  --x-highlight-text: -moz-win-accentcolortext;
+ }
+}
+
+
 * {
  --chrome-background-color: Window !important;
  --chrome-secondary-background-color: Window !important;
- --chrome-selection-background-color: Highlight !important;
- --chrome-selection-color: HighlightText !important;
- --tab-line-color: Highlight !important;
- --tab-line-selected-color: Highlight !important;
+ --chrome-selection-background-color: var(--x-highlight) !important;
+ --chrome-selection-color: var(--x-highlight-text) !important;
+ --tab-line-color: var(--x-highlight) !important;
+ --tab-line-selected-color: var(--x-highlight) !important;
  --theme-tab-toolbar-background: Window !important;
  --theme-toolbar-background: Window !important;
  --theme-toolbar-background-hover: transparent !important;
- --theme-toolbar-selected-color: Highlight !important;
- --theme-selection-background: Highlight !important;
+ --theme-toolbar-selected-color: var(--x-highlight) !important;
+ --theme-selection-background: var(--x-highlight) !important;
  --theme-selection-background-hover: ButtonFace !important;
- --theme-selection-color: HighlightText !important;
- --toolbarbutton-icon-fill-attention: Highlight !important;
+ --theme-selection-color: var(--x-highlight-text) !important;
+ --toolbarbutton-icon-fill-attention: var(--x-highlight) !important;
+}
+
+#urlbar[focused="true"],
+.searchbar-textbox[focused="true"] {
+ border-color: var(--x-highlight) !important;
+}
+
+#urlbar[focused="true"] ::-moz-selection,
+.searchbar-textbox[focused="true"] ::-moz-selection {
+ background: var(--x-highlight) !important;
+ color: var(--x-highlight-text) !important;
 }
 
 #sidebar-header {
@@ -29,7 +53,7 @@
 }
 
 .tabbrowser-tab[selected="true"] .tab-line {
- background: Highlight !important;
+ background: var(--x-highlight) !important;
 }
 
 #navigator-toolbox > toolbar:not(#TabsToolbar):not(#toolbar-menubar), .browserContainer > findbar, #browser-bottombox {
