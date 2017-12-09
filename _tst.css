@@ -1,4 +1,4 @@
-/* For use with the Flat theme. */
+/* For use with the Vertigo theme. */
 
 /* Pinned tab row(s) background */
 html {
@@ -43,6 +43,18 @@ body, #tabContextMenu * {
 
 .tab.active {
  background-color: Highlight !important;
+}
+
+.tab.active * {
+ color: HighlightText !important;
+}
+
+.tab.active .closebox::after {
+ fill: HighlightText !important;
+}
+
+.simulate-svg-context-fill:root .tab.active .closebox::after {
+ background: HighlightText !important;
 }
 
 .tab .twisty {
