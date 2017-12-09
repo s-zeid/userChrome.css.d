@@ -1,3 +1,5 @@
+/* For use with the Flat theme. */
+
 /* Pinned tab row(s) background */
 html {
  background: Window !important;
@@ -61,5 +63,9 @@ body, #tabContextMenu * {
 }
 
 .newtab-button-box {
+ display: none !important;
+}
+
+#context_reloadAllTabs {
  display: none !important;
 }
