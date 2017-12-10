@@ -3,6 +3,7 @@
 /* Pinned tab row(s) background */
 html {
  background: Window !important;
+ --tab-highlighted-glow: Highlight !important;
 }
 
 /* Non-pinned tabs background */
