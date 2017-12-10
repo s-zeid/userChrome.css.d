@@ -16,7 +16,8 @@ Installation
 
 Also included is a Tree Style Tab stylesheet at `_tst.css`.  To use it with the
 WebExtension version of TST, simply paste it into the "Extra style rules for sidebar
-contents" text box in the Advanced section of TST's preferences.
+contents" text box in the Advanced section of TST's preferences and select the
+"Vertigo" theme.
 
 
 Adding/changing/removing stylesheets
