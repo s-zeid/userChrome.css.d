@@ -1,6 +1,9 @@
-#nav-bar {
- padding-right: 0.5px !important;
+/* normal uidensity */ #nav-bar {
+ padding: 1px 2px 1px 1px !important;
 }
 [uidensity="compact"] #nav-bar {
- padding-left: 3px !important;
+ padding: 2px 3px !important;
+}
+[uidensity="touch"] #nav-bar {
+ padding: 2px 0 2px 2px !important;
 }
