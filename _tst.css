@@ -79,6 +79,7 @@ body, #tabContextMenu * {
  display: none !important;
 }
 
-#context_reloadAllTabs {
+#context_reloadAllTabs, #context_closeTabsToTheEnd, #context_closeOtherTabs,
+#context_openTabInWindow + .separator {
  display: none !important;
 }
