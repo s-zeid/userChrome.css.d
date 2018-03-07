@@ -50,10 +50,20 @@ body, #tabContextMenu * {
  color: HighlightText !important;
 }
 
+.favicon-default {
+ opacity: 0.375 !important;
+}
+
+.tab.active .favicon-default {
+ opacity: 0.625 !important;
+}
+
+.tab.active .favicon-default::before,
 .tab.active .closebox::after {
  fill: HighlightText !important;
 }
 
+.simulate-svg-context-fill:root .tab.active .favicon-default::before,
 .simulate-svg-context-fill:root .tab.active .closebox::after {
  background: HighlightText !important;
 }
