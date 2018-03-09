@@ -50,6 +50,18 @@ body, #tabContextMenu * {
  color: HighlightText !important;
 }
 
+/* Ugly fucking abomination of a hack to force the default favicon 
+   for new tabs */
+.tab:not(.loading)
+.favicon-image[src^="moz-extension:"][src$="/globe-16.svg"]:not(.error) {
+ display: none !important;
+}
+.tab:not(.loading):not(.x):not(.x):not(.x):not(.x):not(.x):not(.x):not(.x):not(x)
+.favicon-image[src^="moz-extension:"][src$="/globe-16.svg"]:not(.error)
+ ~ .favicon-default::before {
+ display: inline-block !important;
+}
+
 .favicon-default {
  opacity: 0.375 !important;
 }
