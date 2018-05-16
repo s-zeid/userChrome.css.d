@@ -11,7 +11,7 @@
 }
 
 
-* {
+:root {
  --chrome-background-color: Window !important;
  --chrome-secondary-background-color: Window !important;
  --chrome-selection-background-color: var(--x-highlight) !important;
@@ -26,6 +26,7 @@
  --theme-selection-background-hover: ButtonFace !important;
  --theme-selection-color: var(--x-highlight-text) !important;
  --toolbarbutton-icon-fill-attention: var(--x-highlight) !important;
+ --urlbar-popup-url-color: var(--x-highlight) !important;
 }
 
 #urlbar[focused="true"],
