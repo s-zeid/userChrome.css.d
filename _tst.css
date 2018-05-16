@@ -1,14 +1,37 @@
 /* For use with the Vertigo theme. */
 
+:root {
+ --x-background: var(--js-background, Window);
+ --x-background-alpha: 0.64;
+ --x-background-alpha-pinned: 0;
+ --x-highlight: Highlight !important;
+ --x-highlight-text: HighlightText !important;
+ 
+ --tab-surface: transparent !important;
+ --tab-surface-hover: ButtonFace !important;
+ --x-tab-surface-hover-pinned: rgba(0, 0, 0, 0.04) !important;
+ --tab-text: ButtonText !important;
+ --tab-surface-active: var(--x-highlight) !important;
+ --tab-surface-active-hover: var(--tab-surface-active) !important;
+ --tab-active-text: var(--x-highlight-text) !important;
+ --tab-highlighted-glow: var(--x-highlight) !important;
+}
+
+:root[data-js-background] {
+ --x-background-alpha: 0.4;
+ --x-background-alpha-pinned: 0.4;
+ --tab-surface-hover: rgba(0, 0, 0, 0.085) !important;
+ --x-tab-surface-hover-pinned: rgba(0, 0, 0, 0.1) !important;
+}
+
 /* Pinned tab row(s) background */
-html {
- background: Window !important;
- --tab-highlighted-glow: Highlight !important;
+html, #background {
+ background: linear-gradient(rgba(255, 255, 255, var(--x-background-alpha-pinned)), rgba(255, 255, 255, var(--x-background-alpha-pinned))), var(--x-background) !important;
 }
 
 /* Non-pinned tabs background */
 #tabbar {
- background: linear-gradient(rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.64)), Window !important;
+ background: linear-gradient(rgba(255, 255, 255, var(--x-background-alpha)), rgba(255, 255, 255, var(--x-background-alpha))), transparent !important;
  background-clip: padding-box !important;
 }
 
@@ -30,24 +53,8 @@ body, #tabContextMenu * {
  margin-bottom: 0px !important;
 }
 
-.tab:not(.active):not(:hover) {
- background-color: transparent !important;
-}
-
-.tab:not(.active):hover {
- background-color: ButtonFace !important;
-}
-
 .tab.pinned:not(.active):hover {
- background-color: rgba(0, 0, 0, 0.04) !important;
-}
-
-.tab.active {
- background-color: Highlight !important;
-}
-
-.tab.active * {
- color: HighlightText !important;
+ background-color: var(--x-tab-surface-hover-pinned) !important;
 }
 
 /* Ugly fucking abomination of a hack to force the default favicon 
@@ -72,12 +79,12 @@ body, #tabContextMenu * {
 
 .tab.active .favicon-default::before,
 .tab.active .closebox::after {
- fill: HighlightText !important;
+ fill: var(--tab-active-text) !important;
 }
 
 .simulate-svg-context-fill:root .tab.active .favicon-default::before,
 .simulate-svg-context-fill:root .tab.active .closebox::after {
- background: HighlightText !important;
+ background: var(--tab-active-text) !important;
 }
 
 .tab .twisty {
@@ -94,7 +101,7 @@ body, #tabContextMenu * {
  font-size: 10px !important;
 }
 .tab.active .closebox {
- color: HighlightText !important;
+ color: var(--tab-active-text) !important;
 }
 
 .newtab-button-box {
