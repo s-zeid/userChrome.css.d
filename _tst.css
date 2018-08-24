@@ -18,7 +18,7 @@
 }
 
 :root[data-js-background] {
- --x-background-alpha: 0.4;
+ --x-background-alpha: 0.36;
  --x-background-alpha-pinned: 0.4;
  --tab-surface-hover: rgba(0, 0, 0, 0.085) !important;
  --x-tab-surface-hover-pinned: rgba(0, 0, 0, 0.1) !important;
@@ -69,21 +69,21 @@ body, #tabContextMenu * {
  display: inline-block !important;
 }
 
-.favicon-default {
+.tab:not([data-current-uri^="about:privatebrowsing"]) .favicon-default {
  opacity: 0.375 !important;
 }
 
-.tab.active .favicon-default {
+.tab:not([data-current-uri^="about:privatebrowsing"]).active .favicon-default {
  opacity: 0.625 !important;
 }
 
-.tab.active .favicon-default::before,
-.tab.active .closebox::after {
+.tab:not([data-current-uri^="about:privatebrowsing"]).active .favicon-default::before,
+.tab:not([data-current-uri^="about:privatebrowsing"]).active .closebox::after {
  fill: var(--tab-active-text) !important;
 }
 
-.simulate-svg-context-fill:root .tab.active .favicon-default::before,
-.simulate-svg-context-fill:root .tab.active .closebox::after {
+.simulate-svg-context-fill:root .tab:not([data-current-uri^="about:privatebrowsing"]).active .favicon-default::before,
+.simulate-svg-context-fill:root .tab:not([data-current-uri^="about:privatebrowsing"]).active .closebox::after {
  background: var(--tab-active-text) !important;
 }
 
