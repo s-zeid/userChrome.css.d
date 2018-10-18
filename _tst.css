@@ -108,7 +108,7 @@ body, #tabContextMenu * {
  display: none !important;
 }
 
-#tab-drag-handle {
+#tab-drag-handle, #tab-drag-notification {
  display: none !important;
 }
 
