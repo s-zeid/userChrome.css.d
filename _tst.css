@@ -18,10 +18,25 @@
 }
 
 :root[data-js-background] {
- --x-background-alpha: 0.36;
+ --x-background-alpha: 0.5;
  --x-background-alpha-pinned: 0.4;
  --tab-surface-hover: rgba(0, 0, 0, 0.085) !important;
  --x-tab-surface-hover-pinned: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Prevent tabs from being hovered when moving cursor from sidebar to content area.
+   Requires scrollbar to be set to auto or the same side as the sidebar.
+   You may have to reload the sidebar after changing the sidebar position. */
+body::after {
+ content: " "; background: transparent;
+ position: fixed; top: 0; bottom: 0;
+ display: none; width: 6px; z-index: 999;
+}
+.left.left-scrollbar body::after {
+ right: 0; left: auto; display: block;
+}
+.right.right-scrollbar body::after {
+ right: auto; left: 0; display: block;
 }
 
 /* Pinned tab row(s) background */
