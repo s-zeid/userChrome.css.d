@@ -11,13 +11,14 @@
  --x-sidebar-header-height: 0px;  /* comment out if not hiding sidebar header for TST */
 }
 /* normal uidensity */ #sidebar-box {
- --x-sidebar-header-height: 28.5px;
+ --x-sidebar-header-height: var(--x-sidebar-header-height-original);
+ --x-sidebar-header-height-original: 28.5px;
 }
 [uidensity="compact"] #sidebar-box {
- --x-sidebar-header-height: 24.5px;
+ --x-sidebar-header-height-original: 24.5px;
 }
 [uidensity="touch"] #sidebar-box {
- --x-sidebar-header-height: 29.75px;
+ --x-sidebar-header-height-original: 29.75px;
 }
 
 
