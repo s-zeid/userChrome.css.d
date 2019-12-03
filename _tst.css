@@ -9,6 +9,7 @@
  
  --tab-text: ButtonText !important;
  --tab-active-text: var(--x-highlight-text) !important;
+ --tab-border: ThreeDShadow !important;
  --tab-surface: transparent !important;
  --tab-surface-hover: ButtonFace !important;
  --x-tab-surface-hover-pinned: rgba(0, 0, 0, 0.04) !important;
