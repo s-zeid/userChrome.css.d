@@ -1,6 +1,8 @@
 /* For use with the Vertigo theme. */
 
 :root {
+ --x-subpanel-height: 158px;
+ 
  --x-background: var(--js-background, Window);
  --x-background-alpha: 0.64;
  --x-background-alpha-pinned: 0;
@@ -28,15 +30,15 @@
 /* Prevent tabs from being hovered when moving cursor from sidebar to content area.
    Requires scrollbar to be set to auto or the same side as the sidebar.
    You may have to reload the sidebar after changing the sidebar position. */
-body::after {
+#tabbar-container::after {
  content: " "; background: transparent;
  position: fixed; top: 0; bottom: 0;
  display: none; width: 6px; z-index: 999;
 }
-.left body::after {
+.left #tabbar-container::after {
  right: 0; left: auto; display: block;
 }
-.right body::after {
+.right #tabbar-container::after {
  right: auto; left: 0; display: block;
 }
 
@@ -131,4 +133,48 @@ body, #tabContextMenu * {
 #context_reloadAllTabs, #context_closeTabsToTheEnd, #context_closeOtherTabs,
 #context_openTabInWindow + .separator {
  display: none !important;
+}
+
+/* Hide the subpanel header */
+#subpanel-container:not(.collapsed) {
+ border-top: 1px solid var(--tab-border) !important;
+}
+#subpanel-header {
+ display: none !important;
+}
+#subpanel {
+ height: 100% !important;
+}
+
+/* Use fixed height for subpanel */
+#tabbar-container:not([style*="bottom: 0"]) {
+ bottom: var(--x-subpanel-height) !important;
+ height: auto !important;
+}
+#subpanel-container:not(.collapsed) {
+ height: var(--x-subpanel-height) !important;
+}
+#subpanel-header {
+ pointer-events: none !important;
+}
+#subpanel-header button {
+ pointer-events: auto !important;
+}
+#subpanel-toggler {
+ display: none !important;
+}
+
+/* Fix subpanel name alignment */
+#subpanel-header {
+ height: 1.6875em !important;
+}
+#subpanel-selector-anchor {
+ height: 1em !important;
+ padding: 0 0.09375em !important;
+}
+#subpanel-header .label {
+ position: relative; top: -0.15625em;
+}
+#subpanel-toggler::before {
+ position: relative; top: -0.3125em;
 }
