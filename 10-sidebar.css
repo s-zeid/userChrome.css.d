@@ -19,7 +19,7 @@
 #sidebar-splitter {
  width: 1px !important;
  border-left: none !important;
- border-color: ThreeDShadow !important;
+ border-color: ThreeDShadow;
 }
 
 
@@ -28,9 +28,14 @@
 #sidebar-splitter {
  visibility: collapse !important;
 }
+#sidebar-box {
+ border-color: ThreeDShadow;
+}
 #sidebar-box[ordinal="2"] /* on the left */ {
- border-right: 1px solid ThreeDShadow !important;
+ border-right-width: 1px !important;
+ border-right-style: solid !important;
 }
 #sidebar-box[ordinal="4"] /* on the right */ {
- border-left: 1px solid ThreeDShadow !important;
+ border-left-width: 1px !important;
+ border-left-style: solid !important;
 }
