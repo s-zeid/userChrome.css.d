@@ -33,6 +33,7 @@
 }
 #main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #sidebar-box {
  position: fixed !important; top: 0 !important; bottom: 0 !important;
+ display: block !important;
  z-index: 999 !important;
  width: var(--x-sidebar-width) !important;
  box-sizing: border-box !important;
