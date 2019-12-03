@@ -7,13 +7,13 @@
  --x-highlight: Highlight !important;
  --x-highlight-text: HighlightText !important;
  
+ --tab-text: ButtonText !important;
+ --tab-active-text: var(--x-highlight-text) !important;
  --tab-surface: transparent !important;
  --tab-surface-hover: ButtonFace !important;
  --x-tab-surface-hover-pinned: rgba(0, 0, 0, 0.04) !important;
- --tab-text: ButtonText !important;
  --tab-surface-active: var(--x-highlight) !important;
  --tab-surface-active-hover: var(--tab-surface-active) !important;
- --tab-active-text: var(--x-highlight-text) !important;
  --tab-highlighted-glow: var(--x-highlight) !important;
 }
 
