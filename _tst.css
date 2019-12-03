@@ -33,10 +33,10 @@ body::after {
  position: fixed; top: 0; bottom: 0;
  display: none; width: 6px; z-index: 999;
 }
-.left.left-scrollbar body::after {
+.left body::after {
  right: 0; left: auto; display: block;
 }
-.right.right-scrollbar body::after {
+.right body::after {
  right: auto; left: 0; display: block;
 }
 
