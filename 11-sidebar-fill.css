@@ -27,6 +27,9 @@
 #main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #browser-bottombox {
  margin-left: var(--x-sidebar-width) !important;
 }
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) .urlbarView:not(.megabar) {
+ left: var(--x-sidebar-width) !important;
+}
 #main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #sidebar-box {
  position: fixed !important; top: 0 !important; bottom: 0 !important;
  z-index: 999 !important;
