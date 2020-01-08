@@ -12,7 +12,7 @@
 window, page, dialog, wizard, prefwindow, tooltip,
 button, toolbaritem label,
 menubar, menu, menulist, menupopup, menuitem,
-#urlbar-container, #search-container,
+#urlbar-container, #search-container, #statuspanel,
 photonpanelmultiview .subview-subheader, photonpanelmultiview .panel-subview-footer,
 #widget-overflow-fixed-list .toolbarbutton-1 > .toolbarbutton-text, #widget-overflow-list .toolbarbutton-1 > .toolbarbutton-text, .subviewbutton:not(.panel-subview-footer) > .toolbarbutton-text, .PanelUI-subView .subviewbutton:not(.panel-subview-footer) > .menu-text, .PanelUI-subView .subviewbutton:not(.panel-subview-footer) > .menu-iconic-text {
  font-weight: lighter !important;
