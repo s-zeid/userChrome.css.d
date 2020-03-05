@@ -8,6 +8,8 @@
  --x-background-alpha-pinned: 0;
  --x-highlight: Highlight !important;
  --x-highlight-text: HighlightText !important;
+ --x-scrollbar-thumb-color: #ccc !important;
+ --x-scrollbar-track-color: transparent !important;
  --x-subpanel-background: url("http://127.0.0.1:9255/") center / cover !important;
  
  --tab-text: ButtonText !important;
@@ -65,6 +67,7 @@ body, #tabContextMenu * {
 
 #tabbar {
  border: none !important;
+ scrollbar-color: var(--x-scrollbar-thumb-color) var(--x-scrollbar-track-color);
 }
 
 .tab {
