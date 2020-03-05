@@ -8,6 +8,7 @@
  --x-background-alpha-pinned: 0;
  --x-highlight: Highlight !important;
  --x-highlight-text: HighlightText !important;
+ --x-subpanel-background: url("http://127.0.0.1:9255/") center / cover !important;
  
  --tab-text: ButtonText !important;
  --tab-active-text: var(--x-highlight-text) !important;
@@ -177,4 +178,22 @@ body, #tabContextMenu * {
 }
 #subpanel-toggler::before {
  position: relative; top: -0.3125em;
+}
+
+/* Always show subpanel */
+#tabbar-container[style*="bottom: 0"] {
+ bottom: var(--x-subpanel-height) !important;
+ height: auto !important;
+}
+#subpanel-container {
+ visibility: visible !important;
+ height: var(--x-subpanel-height) !important;
+}
+#tabbar-container[style*="bottom: 0"] + #subpanel-container {
+ border-top: 1px solid var(--tab-border);
+}
+
+/* Subpanel background */
+#subpanel-container {
+ background: var(--x-subpanel-background); !important;
 }
