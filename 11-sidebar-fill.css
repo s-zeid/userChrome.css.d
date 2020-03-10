@@ -4,7 +4,7 @@
 
 /* Configuration */
 #main-window {
- --x-sidebar-width: 280.5px;
+ --x-sidebar-width: 280px;
  --x-scale: 1.5;  /* scaling factor for HiDPI displays */
 }
 :root #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
@@ -23,21 +23,28 @@
 
 
 /* Code */
+#main-window {
+ --x-sidebar-and-border-width: calc(var(--x-sidebar-width) + var(--x-sidebar-border-width, 0px) / var(--x-scale));
+}
 #main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #navigator-toolbox,
 #main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #appcontent,
 #main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #browser-bottombox {
- margin-left: var(--x-sidebar-width) !important;
+ margin-left: var(--x-sidebar-and-border-width) !important;
 }
 #main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) .urlbarView:not(.megabar) {
- left: var(--x-sidebar-width) !important;
+ left: var(--x-sidebar-and-border-width) !important;
 }
 #main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #sidebar-box {
- position: fixed !important; top: 0 !important; bottom: 0 !important;
+ position: fixed !important; inset: 0 auto !important;
  display: block !important;
  z-index: 999 !important;
- width: var(--x-sidebar-width) !important;
  box-sizing: border-box !important;
- --x-sidebar-header-height-scaled: calc(var(--x-scale)*var(--x-sidebar-header-height));
+ width: var(--x-sidebar-and-border-width) !important;
+ border-right: var(--x-sidebar-border-width) solid var(--sidebar-border-color) !important;
+ --x-sidebar-header-height-scaled: calc(var(--x-scale) * var(--x-sidebar-header-height));
+}
+#main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #sidebar-splitter {
+ visibility: collapse !important;
 }
 #main-window:not([inDOMFullscreen]):not([chromehidden~="extrachrome"]):not([onclose*="exitPrintPreview"]) #sidebar-header {
  width: 100% !important; height: var(--x-sidebar-header-height-scaled) !important;
