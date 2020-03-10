@@ -1,3 +1,9 @@
+/* Configuration */
+#main-window {
+ --x-sidebar-border-width: 1px;
+}
+
+
 /* Hide sidebar header when Tree Style Tab is active */
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
  border: none !important;
@@ -15,27 +21,17 @@
 }
 
 
-/* Make sidebar splitter (when visible) thinner and ThreeDShadow */
+/* Make sidebar splitter (when visible) thinner and change border color */
 #sidebar-splitter {
- width: 1px !important;
+ width: 0 !important;
  border-left: none !important;
- border-color: ThreeDShadow;
+ border-width: var(--x-sidebar-border-width) !important;
+ border-color: var(--sidebar-border-color) !important;
 }
 
 
-/* Replace sidebar splitter with border on the sidebar itself
+/* Disable dragging the sidebar splitter
    (use Browser Toolbox to resize the sidebar) */
 #sidebar-splitter {
- visibility: collapse !important;
-}
-#sidebar-box {
- border-color: ThreeDShadow;
-}
-#sidebar-box[ordinal="2"] /* on the left */ {
- border-right-width: 1px !important;
- border-right-style: solid !important;
-}
-#sidebar-box[ordinal="4"] /* on the right */ {
- border-left-width: 1px !important;
- border-left-style: solid !important;
+ pointer-events: none;
 }
