@@ -1,7 +1,11 @@
 /* For use with the Vertigo theme. */
 
 :root {
+ --x-subpanel-background: url("http://127.0.0.1:9255/") center / cover !important;
  --x-subpanel-height: 158px;
+ 
+ --x-blank-tab-text: "Blank Tab";
+ --x-new-tab-text: "New Tab";
  
  --x-background: var(--js-background, Window);
  --x-background-alpha: 0.64;
@@ -10,7 +14,6 @@
  --x-highlight-text: HighlightText !important;
  --x-scrollbar-thumb-color: #ccc !important;
  --x-scrollbar-track-color: transparent !important;
- --x-subpanel-background: url("http://127.0.0.1:9255/") center / cover !important;
  
  --tab-text: ButtonText !important;
  --tab-active-text: var(--x-highlight-text) !important;
@@ -126,8 +129,51 @@ body, #tabContextMenu * {
  color: var(--tab-active-text) !important;
 }
 
-.newtab-button-box {
+/* Make the new tab button look like a regular tab */
+#tabbar.overflow > .after-tabs {
+ display: block !important;
+}
+#tabbar.overflow ~ .after-tabs {
  display: none !important;
+}
+.newtab-button {
+ height: var(--tab-size) !important;
+ padding: calc(0.25em - 0.015625em) 0 0 calc(0.25em + 16px) !important;
+ text-align: left;
+}
+.newtab-button:after {
+ content: var(--x-new-tab-text);
+ position: relative; inset: -0.25em 0 0 0.25em;
+}
+.newtab-button-box:not(:hover) .newtab-button:before {
+ opacity: 0.375 !important;
+}
+.newtab-button-box:not(:hover) .newtab-button:after {
+ opacity: 0.5 !important;
+}
+.newtab-button-box:hover {
+ background: var(--tab-surface-hover) !important;
+}
+.newtab-button:focus {
+ box-shadow: none !important;
+}
+.newtab-button::-moz-focus-inner {
+ border: none !important;
+}
+.after-tabs .newtab-action-selector-anchor,
+.after-tabs .contextual-identities-selector-anchor {
+ align-items: center !important;
+ padding: 0.125em 1.53125em !important;
+}
+.after-tabs .newtab-action-selector-anchor:not(:hover):before,
+.after-tabs .contextual-identities-selector-anchor:not(:hover):before {
+ opacity: 0.625 !important;
+}
+.tab[data-current-uri="about:blank"]:not([data-title="about:blank"]) .label-content {
+ display: none !important;
+}
+.tab[data-current-uri="about:blank"]:not([data-title="about:blank"]) .label:after {
+ content: var(--x-blank-tab-text); position: relative; inset: 0.09375em 0 0 0;
 }
 
 #tab-drag-handle, #tab-drag-notification {
