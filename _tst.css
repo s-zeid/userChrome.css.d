@@ -185,6 +185,18 @@ body, #tabContextMenu * {
  display: none !important;
 }
 
+/* Height, opacity, and hide icon for Tree Style Tab separator data: URI tabs
+   <https://gist.github.com/f4c51606f99e990774133e9eb46905ee> */
+.tab[data-current-uri^="data:text/html;"][data-current-uri*='<link rel="help" href="https://gist.github.com/f4c51606f99e990774133e9eb46905ee" />'] {
+ height: var(--favicon-size); padding-left: 0;
+}
+.tab[data-current-uri^="data:text/html;"][data-current-uri*='<link rel="help" href="https://gist.github.com/f4c51606f99e990774133e9eb46905ee" />'] .favicon {
+ display: none !important;
+}
+.tab[data-current-uri^="data:text/html;"][data-current-uri*='<link rel="help" href="https://gist.github.com/f4c51606f99e990774133e9eb46905ee" />'] .label {
+ opacity: 0.375 !important;
+}
+
 /* Hide the subpanel header */
 #subpanel-container:not(.collapsed) {
  border-top: 1px solid var(--tab-border) !important;
