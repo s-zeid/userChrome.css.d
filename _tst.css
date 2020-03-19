@@ -8,10 +8,11 @@
  --x-new-tab-text: "New Tab";
  
  --x-background: var(--js-background, Window);
- --x-background-alpha: 0.64;
+ --x-background-alpha: 0.625;
  --x-background-alpha-pinned: 0;
  --x-highlight: Highlight !important;
  --x-highlight-text: HighlightText !important;
+ --x-new-tab-button-opacity: 0.625;
  --x-scrollbar-thumb-color: #ccc !important;
  --x-scrollbar-track-color: transparent !important;
  
@@ -20,7 +21,7 @@
  --tab-border: ThreeDShadow !important;
  --tab-surface: transparent !important;
  --tab-surface-hover: ButtonFace !important;
- --x-tab-surface-hover-pinned: rgba(0, 0, 0, 0.04) !important;
+ --x-tab-surface-hover-pinned: rgba(0, 0, 0, 0.0375) !important;
  --tab-surface-active: var(--x-highlight) !important;
  --tab-surface-active-hover: var(--tab-surface-active) !important;
  --tab-highlighted-glow: var(--x-highlight) !important;
@@ -28,8 +29,8 @@
 
 :root[data-js-background] {
  --x-background-alpha: 0.5;
- --x-background-alpha-pinned: 0.4;
- --tab-surface-hover: rgba(0, 0, 0, 0.085) !important;
+ --x-background-alpha-pinned: 0.375;
+ --tab-surface-hover: rgba(0, 0, 0, 0.0875) !important;
  --x-tab-surface-hover-pinned: rgba(0, 0, 0, 0.1) !important;
 }
 
@@ -146,10 +147,10 @@ body, #tabContextMenu * {
  position: relative; inset: -0.25em 0 0 0.25em;
 }
 .newtab-button-box:not(:hover) .newtab-button:before {
- opacity: 0.375 !important;
+ opacity: calc(var(--x-new-tab-button-opacity) * 0.75) !important;
 }
 .newtab-button-box:not(:hover) .newtab-button:after {
- opacity: 0.5 !important;
+ opacity: var(--x-new-tab-button-opacity) !important;
 }
 .newtab-button-box:hover {
  background: var(--tab-surface-hover) !important;
