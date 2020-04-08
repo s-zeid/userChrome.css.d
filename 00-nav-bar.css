@@ -7,3 +7,16 @@
 [uidensity="touch"] #nav-bar {
  padding: 2px 0 2px 2px !important;
 }
+
+#urlbar[breakout]:not([breakout-extend]) {
+ top: calc(50% - var(--urlbar-height) / 2) !important;
+}
+/* normal uidensity */ #urlbar[breakout][breakout-extend] {
+ top: -3px !important;
+}
+[uidensity="compact"] #urlbar[breakout][breakout-extend] {
+ top: -4px !important;
+}
+[uidensity="touch"] #urlbar[breakout][breakout-extend] {
+ top: -4px !important;
+}
